@@ -14,6 +14,20 @@ if key_jump and on_ground
 	vspd += jump_spd;
 }
 
+// Change Sprite
+
+if hspd == 0
+{
+	sprite_index = sPlayer
+} else  {
+	image_xscale = sign(hspd)
+	sprite_index = sPlayerRun 
+}
+
+if !on_ground 
+	sprite_index = sPlayerJump
+
+// Collision Code
 if(place_meeting(x+hspd,y,oSolid))
 {
 	while(!place_meeting(x+sign(hspd),y,oSolid))
