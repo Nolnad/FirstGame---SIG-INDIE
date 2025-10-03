@@ -1,7 +1,7 @@
 ///Properties
 ideal_width=0; //Doesn't matter because we are going to calculate this.
 ideal_height=360;
-zoom=.5;
+zoom=1;
 max_zoom=1;
 use_sub_pixels=false;
  
@@ -17,7 +17,6 @@ ideal_height=round(ideal_height);
  
 //Check to make sure the width and height isn't an odd number
  
- 
 if(ideal_width & 1)
   ideal_width++;
      
@@ -26,8 +25,6 @@ if(ideal_height & 1)
  
 global.ideal_width = ideal_width
 global.ideal_height = ideal_height
-max_zoom = floor(display_get_width()/ideal_width);
- 
 
  
 for(var i=1; i<= room_last; i++)
@@ -44,7 +41,4 @@ surface_resize(application_surface,ideal_width,ideal_height);
 display_set_gui_size(ideal_width,ideal_height);
 window_set_size(ideal_width*zoom,ideal_height*zoom);
  
-window_set_fullscreen(true)
-window_enable_borderless_fullscreen(true)
-
 room_goto_next()

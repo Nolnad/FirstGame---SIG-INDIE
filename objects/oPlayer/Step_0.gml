@@ -1,6 +1,8 @@
+// Get Inputs
 key_left =  keyboard_check(vk_left) or keyboard_check(ord("A"))
 key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"))
 key_jump  = keyboard_check(vk_space)|| keyboard_check(ord("Z"))
+
 var on_ground = place_meeting(x,y+1,oSolid)
 
 dir_h = key_right - key_left
@@ -13,19 +15,6 @@ if key_jump and on_ground
 {
 	vspd += jump_spd;
 }
-
-// Change Sprite
-
-if hspd == 0
-{
-	sprite_index = sPlayer
-} else  {
-	image_xscale = sign(hspd)
-	sprite_index = sPlayerRun 
-}
-
-if !on_ground 
-	sprite_index = sPlayerJump
 
 // Collision Code
 if(place_meeting(x+hspd,y,oSolid))
@@ -48,3 +37,15 @@ if(place_meeting(x,y+vspd,oSolid))
 }
 y += vspd
  
+// Change Sprite
+if hspd == 0
+{
+	
+	sprite_index = sPlayer
+} else  {
+	image_xscale = sign(hspd)
+	sprite_index = sPlayerRun 
+}
+
+if !on_ground 
+	sprite_index = sPlayerJump

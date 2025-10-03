@@ -1,7 +1,5 @@
 follow = noone;
 
-window_set_fullscreen(1)
-
 cam = camera_create_view(0,0,global.ideal_width,global.ideal_height);
 view_set_camera(0,cam);
 
