@@ -9,3 +9,8 @@ walk_spd = 4
 jump_spd = -5
 
 dir_h = 0
+
+jumps_max = 2;
+jumps = 0;
+jump_buffer = 0
+jump_buffer_max = 7
