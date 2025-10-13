@@ -4,6 +4,7 @@ key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"))
 key_jump  = keyboard_check(vk_space)|| keyboard_check(ord("Z"))
 key_jump_pressed  = keyboard_check_pressed(vk_space)|| keyboard_check_pressed(ord("Z"))
 
+hp = clamp(hp,0,hp_max);
 
 var on_ground = place_meeting(x,y+1,oSolid)
 

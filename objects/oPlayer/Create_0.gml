@@ -14,3 +14,6 @@ jumps_max = 2;
 jumps = 0;
 jump_buffer = 0
 jump_buffer_max = 7
+
+hp_max = 5
+hp = 3
