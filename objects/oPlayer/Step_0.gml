@@ -56,7 +56,6 @@ y += vspd;
 // Change Sprite
 if hspd == 0
 {
-	
 	sprite_index = sPlayer
 } else  {
 	image_xscale = sign(hspd)
