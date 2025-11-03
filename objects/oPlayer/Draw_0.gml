@@ -1,4 +1,14 @@
-draw_self();
+uPW = shader_get_uniform(shOutline,"pixelW")
+uPH = shader_get_uniform(shOutline,"pixelH")
+
+PW = texture_get_texel_width(sprite_get_texture(sPlayer,image_index))
+PH = texture_get_texel_height(sprite_get_texture(sPlayer,image_index))
+
+shader_set(shOutline)
+     shader_set_uniform_f(uPW,PW)
+     shader_set_uniform_f(uPH,PH)
+    draw_self();
+shader_reset()
 
 draw_text(x,y- 20,jump_buffer);
 

@@ -17,3 +17,7 @@ angle = 0
 angle_range = 60
 
 dmg = 1
+
+hp = 3
+
+flash = 0

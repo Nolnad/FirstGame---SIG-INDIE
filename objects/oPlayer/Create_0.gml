@@ -17,3 +17,13 @@ jump_buffer_max = 7
 
 hp_max = 5
 hp = 3
+
+iframes = 0
+
+my_sword = instance_create_depth(x,y,depth,oSword)
+
+enum PLAYER_STATE {
+    ALIVE,
+    DEAD
+}
+state = PLAYER_STATE.ALIVE

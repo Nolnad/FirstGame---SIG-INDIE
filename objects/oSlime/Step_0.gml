@@ -41,5 +41,9 @@ if(place_meeting(x,y+vspd_final,oSolid))
 }
 y += vspd_final;
 
-kb_hspd = 0;
-kb_vspd = 0;
+    kb_hspd = approach(kb_hspd,0,0.4);
+    kb_vspd = approach(kb_vspd,0,0.4);
+
+if hp <= 0 {
+	instance_destroy();	
+}
