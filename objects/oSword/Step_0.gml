@@ -28,3 +28,4 @@ swing_delay-=1;
 
 x = owner.x
 y = owner.y
+

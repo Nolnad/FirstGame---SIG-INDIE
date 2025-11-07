@@ -11,6 +11,8 @@ shader_set(shOutline)
 shader_reset()
 
 draw_text(x,y- 20,jump_buffer);
+draw_self();
+
 
 var circle_rad = 18
 var offset_x = circle_rad*2 + 4

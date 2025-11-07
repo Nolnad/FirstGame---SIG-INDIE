@@ -1,5 +1,6 @@
 // Get Inputs
-key_left  =  keyboard_check(vk_left) or keyboard_check(ord("A"))
+
+key_left  = keyboard_check(vk_left) or keyboard_check(ord("A"))
 key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"))
 key_jump  = keyboard_check(vk_space)|| keyboard_check(ord("Z"))
 key_jump_pressed  = keyboard_check_pressed(vk_space)|| keyboard_check_pressed(ord("Z"))
@@ -53,6 +54,7 @@ if(place_meeting(x+hspd,y,oSolid))
 	hspd = 0;
 }
 x += hspd;
+
 
 if(place_meeting(x,y+vspd,oSolid))
 {
